@@ -1,0 +1,12 @@
+<html>
+    <header>
+
+    </header>
+    <body>
+        <div>
+            {% for comment in comment_list %}
+                <a href="/{{comment.id }}">{{ comment.title }} / {{ comment.content }}</a>
+            {% endfor %}
+        </div>
+    </body>
+</html>
