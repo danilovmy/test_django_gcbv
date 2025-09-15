@@ -19,6 +19,7 @@ from django.urls import path
 from posts import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('<int:pk>', views.CommentView.as_view()),
+    path('<int:pk>/', views.CommentView.as_view()),
+    path('<int:pk>/edit', views.CommentEditView.as_view()),
     path('', views.CommentListView.as_view()),
 ]
